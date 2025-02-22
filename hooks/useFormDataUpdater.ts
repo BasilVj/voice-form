@@ -1,4 +1,5 @@
 import { formData } from "@/types/form";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import React from "react";
 
@@ -19,6 +20,8 @@ const useFormDataUpdater = (
           : value,
     }));
   };
+
+  const router = useRouter();
 
   useEffect(() => {
     if (text !== "") {
@@ -54,6 +57,7 @@ const useFormDataUpdater = (
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert("Successfully Submitted 🤠 ");
+    router.push("/resume");
   };
 
   return {

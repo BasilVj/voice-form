@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import { voiceRecordingAnimation } from "@/constants/imagePath";
-import useSpeechRecognition from "@/hooks/useSpeechRecognition";
 
 type RecordingAnimation = {
   isListening: boolean;
